@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
+
+<header>
     <div class="container">
-        <h1>🏃‍♂️ RunJuan</h1>
+        <!-- LOGO / SITE NAME ON THE LEFT -->
+        <div class="logo">
+            <h1><span>RunJuan</span></h1>
+        </div>
+
+        <!-- NAVIGATION ON THE RIGHT -->
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -22,4 +28,4 @@
     </div>
 </header>
 
-    <main>
+<main>
