@@ -1,3 +1,38 @@
+/* === INTER GOOGLE FONT – CLEAN & MODERN FOR ENTIRE SITE === */
+* {
+    font-family: 'Inter', sans-serif !important;
+}
+
+body {
+    font-weight: 400;
+    line-height: 1.7;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Extra fine-tuning for perfect look */
+.hero-content h1 {
+    font-weight: 900 !important;   /* Big hero stays bold */
+}
+
+header .logo span,
+header nav ul li a,
+.btn-primary,
+.btn-secondary,
+footer p {
+    font-weight: 600 !important;
+}
+
+.tagline,
+.feature-card p,
+.section p {
+    font-weight: 300 !important;   /* Light and elegant */
+    letter-spacing: 0.3px;
+}
 /* PARALLAX HERO SECTION */
 .hero-parallax {
     height: 100vh;                    /* Full screen height */
@@ -198,7 +233,7 @@ footer a:hover {
 }
 
 /* Little heart animation for fun */
-footer p::before {
+footer p {
     content: "Made with ";
     color: white;
 }
