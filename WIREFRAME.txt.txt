@@ -1,0 +1,28 @@
+RUNJUAN ONE-PAGE WIREFRAME (Day 2)
+
+┌─────────────────────────────────────────────────────────────┐
+│ HEADER (fixed)                                              │
+│  RunJuan          [Home] [About] [Events] [Register] [Contact] │
+└─────────────────────────────────────────────────────────────┘
+
+1. HERO SECTION (#home)                  ← Full-screen
+   "Welcome to RunJuan!"
+   "Run for fun. Run for charity. Run with Juan!"
+   [ Join the Next Run ] button
+
+2. ABOUT SECTION (#about)
+   Our mission + photos of runners
+
+3. UPCOMING EVENTS (#events)
+   Event cards: date, location, charity cause
+
+4. REGISTER SECTION (#register)
+   Form: Name | Email | Phone | Shirt Size
+
+5. CONTACT (#contact)
+   Email, phone, social media links
+
+┌─────────────────────────────────────────────────────────────┐
+│ FOOTER                                                      │
+│  © 2025 RunJuan • Made with ❤️ for charity runners          │
+└─────────────────────────────────────────────────────────────┘

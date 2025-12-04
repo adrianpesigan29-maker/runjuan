@@ -1,0 +1,133 @@
+/* PARALLAX HERO SECTION */
+.hero-parallax {
+    height: 100vh;                    /* Full screen height */
+    background-image: url('../img/hero-running.jpg');
+    background-attachment: fixed;     /* This creates the parallax magic! */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* === FIXED HEADER & NAVIGATION (Day 2 classic look) === */
+/* PERFECT FIXED HEADER & NAVIGATION */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;   /* logo left, nav right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;                /* perfect spacing between links */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Push everything below the fixed header */
+main {
+    margin-top: 90px;
+}
+/* BEAUTIFUL FIXED FOOTER — ALWAYS AT THE BOTTOM */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;                    /* This pushes the footer down */
+    margin-top: 90px;           /* Space for fixed header */
+}
+
+/* FOOTER STYLING — CLEAN & MODERN */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.95rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+footer p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Little heart animation for fun */
+footer p::before {
+    content: "Made with ";
+    color: white;
+}
+
+footer p span.heart {
+    color: #e74c3c;
+    font-size: 1.1em;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
