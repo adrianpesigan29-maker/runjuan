@@ -48,8 +48,74 @@
     <div class="container">
         <h2>Ready to Start Running?</h2>
         <div class="cta-buttons">
-            <a href="#register" class="btn-primary">Join the Community</a>
-            <a href="#blog" class="btn-secondary">Read Microblogs</a>
+    <a href="#register" class="btn-primary">Join the Community</a>
+    <a href="microblog-list.php" class="btn-secondary">Read Microblogs</a>
+</div>
+    </div>
+</section>
+<!-- ==================== EVENTS SECTION ==================== -->
+<section class="section" id="events">
+    <div class="container">
+        <h2>Upcoming Events</h2>
+        <p>Join us and run for a cause!</p>
+
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-date">MAR 15</div>
+                <h3>Run for Education 2026</h3>
+                <p><strong>Location:</strong> Manila Bay</p>
+                <p><strong>Distances:</strong> 5K • 10K • 21K</p>
+                <p>Help send 500 kids to school this year.</p>
+                <a href="#register" class="btn-primary">Register Now</a>
+            </div>
+
+            <div class="event-card">
+                <div class="event-date">JUN 20</div>
+                <h3>Charity Night Run</h3>
+                <p><strong>Location:</strong> BGC, Taguig</p>
+                <p><strong>Distance:</strong> 3K Fun Run</p>
+                <p>Glow sticks, music, and good vibes!</p>
+                <a href="#register" class="btn-primary">Register Now</a>
+            </div>
+
+            <div class="event-card">
+                <div class="event-date">SEP 10</div>
+                <h3>Run for Clean Water</h3>
+                <p><strong>Location:</strong> Quezon City Circle</p>
+                <p><strong>Distances:</strong> 3K • 5K • 10K</p>
+                <p>Every kilometer = 1 liter of clean water donated.</p>
+                <a href="#register" class="btn-primary">Register Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CONTACT SECTION ==================== -->
+<section class="section bg-light" id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>We’re here to help you start running for good.</p>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><strong>Email:</strong> hello@runjuan.ph</p>
+                <p><strong>Phone:</strong> +63 917 123 4567</p>
+                <p><strong>Address:</strong> Manila, Philippines</p>
+                
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Strava</a>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
         </div>
     </div>
 </section>
