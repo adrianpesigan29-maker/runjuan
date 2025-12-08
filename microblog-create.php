@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'components/header.php'; ?>
 <?php include 'config.php'; ?>
 
 <div class="container" style="max-width:800px; margin:80px auto; padding:20px;">
@@ -36,4 +36,4 @@
     </p>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'components/footer.php'; ?>

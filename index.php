@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'components/header.php'; ?>
 
 <!-- 1. PARALLAX HERO SECTION -->
 <section class="hero-parallax" id="home">
@@ -120,4 +120,4 @@
     </div>
 </section>
 
-<?php include 'footer.php'; ?>
+<?php include 'components/footer.php'; ?>
