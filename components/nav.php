@@ -4,7 +4,6 @@
             <h1><a href="index.php"><span>RunJuan</span></a></h1>
         </div>
 
-        <!-- Desktop Nav -->
         <nav class="nav-desktop">
             <ul>
                 <li><a href="index.php">Home</a></li>
@@ -16,7 +15,6 @@
             </ul>
         </nav>
 
-        <!-- Mobile Menu Button -->
         <div class="menu-toggle">
             <span></span>
             <span></span>
@@ -24,7 +22,6 @@
         </div>
     </div>
 
-    <!-- Mobile Menu -->
     <nav class="nav-mobile">
         <a href="index.php">Home</a>
         <a href="index.php#about">About</a>

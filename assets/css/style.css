@@ -560,3 +560,47 @@ body.menu-open {
 .read-more:hover {
     color: #e67e22;
 }
+/* CLEAN MINIMALIST NAV – VIBE CODING */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-desktop ul {
+    display: flex;
+    gap: 45px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-desktop a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-desktop a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -8px;
+    left: 50%;
+    background: #1abc9c;
+    transition: all 0.3s ease;
+}
+
+.nav-desktop a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-desktop a:hover {
+    color: #1abc9c;
+}
