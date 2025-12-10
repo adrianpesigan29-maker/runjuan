@@ -4,7 +4,7 @@
 <section class="hero-parallax" id="home">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1>RunJuan</h1>
+        <h1>Run Juan</h1>
         <p class="tagline">Run for Fun. Run for Charity. Run with Juan!</p>
         <a href="#register" class="btn-primary">Join the Next Run</a>
     </div>
