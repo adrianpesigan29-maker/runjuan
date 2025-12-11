@@ -1,3 +1,99 @@
+/* GLOBAL RESPONSIVE FIXES — MOBILE FIRST */
+* { box-sizing: border-box; }
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* CONTAINER — RESPONSIVE WIDTH */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HERO PARALLAX — MOBILE FIX */
+.hero-parallax {
+    background-attachment: scroll !important; /* parallax breaks on mobile */
+    min-height: 100vh;
+    padding: 120px 20px 80px;
+    text-align: center;
+}
+
+.hero-parallax h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero-parallax p {
+    font-size: 1.3rem;
+    max-width: 90%;
+    margin: 0 auto 30px;
+}
+
+/* ALL SECTIONS — BETTER SPACING ON MOBILE */
+.section {
+    padding: 80px 20px;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* GRID SYSTEMS — MOBILE STACK */
+.about-grid,
+.events-grid,
+.features-grid,
+.contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 50px;
+}
+
+/* IMAGES — NEVER OVERFLOW */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* BUTTONS — FULL WIDTH ON MOBILE */
+.btn-primary,
+.btn-secondary {
+    padding: 16px 30px;
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* FOOTER — CLEAN ON MOBILE */
+footer .container {
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (min-width: 768px) {
+    .hero-parallax h1 { font-size: 4.5rem; }
+    .hero-parallax p { font-size: 1.5rem; }
+    .section h2 { font-size: 3.2rem; }
+}
+
+@media (min-width: 1024px) {
+    .about-grid,
+    .events-grid,
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+}
 /* === INTER GOOGLE FONT – CLEAN & MODERN FOR ENTIRE SITE === */
 * {
     font-family: 'Inter', sans-serif !important;
@@ -355,20 +451,21 @@ p {
 }
 
 .chevron {
-    width: 30px;
-    height: 30px;
-    border: 3px solid white;
-    border-top: none;
+    width: 36px;
+    height: 36px;
+    border: 4px solid white;
     border-left: none;
-    transform: rotate(135deg);
-    margin: 15px auto 0;
+    border-top: none;
+    transform: rotate(-135deg);   /* ← NOW POINTS UP ↑ */
+    margin: 20px auto 0;
     animation: bounce 2s infinite;
+    border-radius: 4px;
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(135deg); }
-    40% { transform: translateY(-15px) rotate(135deg); }
-    60% { transform: translateY(-8px) rotate(135deg); }
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(-135deg); }
+    40% { transform: translateY(-20px) rotate(-135deg); }
+    60% { transform: translateY(-10px) rotate(-135deg); }
 }
 /* MOBILE MENU */
 .menu-toggle {
