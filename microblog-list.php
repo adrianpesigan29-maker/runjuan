@@ -10,11 +10,21 @@ include 'config.php';
 <div class="container" style="max-width:1000px;margin:100px auto;padding:20px;">
     <h2 style="text-align:center;margin-bottom:60px;color:#2c3e50;font-size:3rem;">RunJuan Microblog</h2>
 
-    <div style="text-align:center;margin-bottom:50px;">
-        <a href="microblog-create.php" style="display:inline-block;background:#e67e22;color:white;padding:18px 50px;border-radius:60px;font-size:1.3rem;font-weight:700;text-decoration:none;box-shadow:0 15px 40px rgba(230,126,34,0.3);">
-            + Write New Post
-        </a>
-    </div>
+    <!-- POST FORM — ONLY FOR LOGGED-IN USERS -->
+    <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']): ?>
+        <div style="text-align:center;margin-bottom:50px;">
+            <a href="microblog-create.php" style="display:inline-block;background:#e67e22;color:white;padding:18px 50px;border-radius:60px;font-size:1.3rem;font-weight:700;text-decoration:none;box-shadow:0 15px 40px rgba(230,126,34,0.3);">
+                + Write New Post
+            </a>
+        </div>
+    <?php else: ?>
+        <div style="text-align:center;margin-bottom:80px;padding:60px;background:#f8f9fa;border-radius:24px;">
+            <p style="font-size:1.8rem;color:#666;margin-bottom:30px;">Login to share your running stories with the community</p>
+            <a href="login.php" style="background:#e67e22;color:white;padding:18px 50px;border-radius:60px;font-size:1.4rem;font-weight:700;text-decoration:none;box-shadow:0 15px 40px rgba(230,126,34,0.3);">
+                Login to Post
+            </a>
+        </div>
+    <?php endif; ?>
 
     <div style="display:grid;gap:40px;">
         <?php
@@ -40,6 +50,7 @@ include 'config.php';
             // Show posts
             while ($post = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 $short = substr($post['content'], 0, 200) . (strlen($post['content']) > 200 ? '...' : '');
+                $author = !empty($post['author']) ? $post['author'] : 'Anonymous Runner';
         ?>
                 <article style="background:white;padding:40px;border-radius:24px;box-shadow:0 15px 40px rgba(0,0,0,0.08);border-left:6px solid #e67e22;">
                     <h3 style="margin:0 0 15px;font-size:2rem;">
@@ -48,7 +59,7 @@ include 'config.php';
                         </a>
                     </h3>
                     <p style="color:#888;margin:0 0 20px;font-size:1rem;">
-                        by <?=htmlspecialchars($post['author'])?> • 
+                        by <strong style="color:#e67e22;"><?=htmlspecialchars($author)?></strong> • 
                         <?=date('F j, Y', strtotime($post['created_at']))?>
                     </p>
                     <p style="color:#555;line-height:1.8;font-size:1.1rem;">
@@ -58,17 +69,20 @@ include 'config.php';
                         Read full story →
                     </a>
 
-                    <div style="margin-top:25px;display:flex;gap:20px;justify-content:flex-end;">
-                        <a href="microblog-edit.php?id=<?=$post['id']?>" 
-                           style="color:#e67e22;font-weight:700;text-decoration:none;font-size:1.1rem;">
-                            Edit Post
-                        </a>
-                        <a href="microblog-delete.php?id=<?=$post['id']?>" 
-                           onclick="return confirm('Are you sure you want to delete this post? It cannot be undone.')"
-                           style="color:#e74c3c;font-weight:700;text-decoration:none;font-size:1.1rem;">
-                            Delete Post
-                        </a>
-                    </div>
+                    <!-- Edit/Delete ONLY if logged in AND owns the post (user_id match) -->
+                    <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && $post['user_id'] == $_SESSION['user_id']): ?>
+                        <div style="margin-top:25px;display:flex;gap:20px;justify-content:flex-end;">
+                            <a href="microblog-edit.php?id=<?=$post['id']?>" 
+                               style="color:#e67e22;font-weight:700;text-decoration:none;font-size:1.1rem;">
+                                Edit Post
+                            </a>
+                            <a href="microblog-delete.php?id=<?=$post['id']?>" 
+                               onclick="return confirm('Are you sure you want to delete this post? It cannot be undone.')"
+                               style="color:#e74c3c;font-weight:700;text-decoration:none;font-size:1.1rem;">
+                                Delete Post
+                            </a>
+                        </div>
+                    <?php endif; ?>
                 </article>
         <?php
             }

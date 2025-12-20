@@ -1,18 +1,31 @@
+<?php session_start(); ?>
 <?php include 'components/header.php'; ?>
 
-<!-- 1. PARALLAX HERO SECTION -->
-<section class="hero-parallax" id="home">
+<section class="hero-runkeeper" id="home">
+    <img src="./assets/img/running.webp" class="hero-bg-img" alt="Running background">
+
     <div class="hero-overlay"></div>
+
     <div class="hero-content">
-        <h1>Run Juan</h1>
-        <p class="tagline">Run for Fun. Run for Charity. Run with Juan!</p>
-        <a href="#register" class="btn-primary">Join the Next Run</a>
-    </div>
-    <div class="scroll-down">
-        <span>Scroll down</span>
-        <div class="chevron"></div>
+        <h1>
+            Together, we<br>
+            <span>run for Juan.</span>
+        </h1>
+
+        <p>
+            Join RunJuan — a Filipino running community focused on
+            fitness, friendship, and charity runs.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="register.php" class="btn primary">Join the Community</a>
+            <a href="#events" class="btn secondary">View Events</a>
+        </div>
     </div>
 </section>
+
+
+
 
 <!-- ABOUT SECTION — ULTRA MINIMALIST & PROFESSIONAL -->
 <section class="about-minimal" id="about">
@@ -155,62 +168,50 @@
     </div>
 </section>
 
-<!-- CONTACT SECTION — PROFESSIONAL, CLEAN & MODERN -->
-<section class="section" id="contact" style="background:#f8f9fa;padding:120px 20px;">
-    <div class="container" style="max-width:1200px;">
-        <div style="text-align:center;margin-bottom:80px;">
-            <h2 style="font-size:3.5rem;color:#2c3e50;margin-bottom:20px;">Get in Touch</h2>
-            <p style="font-size:1.4rem;color:#e67e22;max-width:700px;margin:0 auto;">
+<!-- CONTACT SECTION — ULTRA CLEAN MINIMALIST (LIKE ZENDESK/ASANA) -->
+<section class="contact-clean" id="contact">
+    <div class="container">
+        <div class="contact-header">
+            <h2>Get in Touch</h2>
+            <p class="contact-subtitle">
                 We're here to help you start running for good.
             </p>
         </div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;">
-            <!-- Left: Contact Info + Social -->
-            <div>
-                <div style="background:white;padding:50px;border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,0.08);height:100%;">
-                    <h3 style="color:#2c3e50;margin-bottom:40px;font-size:1.8rem;">Contact Information</h3>
-                    
-                    <div style="margin-bottom:35px;">
-                        <h4 style="color:#e67e22;margin:0 0 10px;font-size:1.1rem;font-weight:600;">Email</h4>
-                        <p style="font-size:1.3rem;margin:0;">
-                            <a href="mailto:hello@runjuan.ph" style="color:#1abc9c;text-decoration:none;">hello@runjuan.ph</a>
-                        </p>
+        <div class="contact-body">
+            <div class="contact-form-side">
+                <form class="contact-form-minimal">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
                     </div>
-                    
-                    <div style="margin-bottom:35px;">
-                        <h4 style="color:#e67e22;margin:0 0 10px;font-size:1.1rem;font-weight:600;">Phone</h4>
-                        <p style="font-size:1.3rem;margin:0;">
-                            <a href="tel:+639304335759" style="color:#1abc9c;text-decoration:none;">+63 930 433 5759</a>
-                        </p>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
                     </div>
-                    
-                    <div style="margin-bottom:50px;">
-                        <h4 style="color:#e67e22;margin:0 0 10px;font-size:1.1rem;font-weight:600;">Address</h4>
-                        <p style="font-size:1.3rem;color:#555;line-height:1.8;">
-                            San Juan, Batangas<br>Philippines
-                        </p>
+                    <div class="form-group">
+                        <textarea rows="8" placeholder="Your Message" required></textarea>
                     </div>
-
-                    <div style="display:flex;gap:20px;">
-                        <a href="#" style="background:#1877f2;color:white;padding:16px 28px;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 10px 25px rgba(24,119,242,0.3);transition:all 0.3s;">Facebook</a>
-                        <a href="#" style="background:#e4405f;color:white;padding:16px 28px;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 10px 25px rgba(228,64,95,0.3);transition:all 0.3s;">Instagram</a>
-                        <a href="#" style="background:#fc4c02;color:white;padding:16px 28px;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 10px 25px rgba(252,76,2,0.3);transition:all 0.3s;">Strava</a>
-                    </div>
-                </div>
+                    <button type="submit" class="btn-send">Send Message</button>
+                </form>
             </div>
 
-            <!-- Right: Form -->
-            <div>
-                <div style="background:white;padding:60px;border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,0.1);">
-                    <form>
-                        <input type="text" placeholder="Your Name" required style="width:100%;padding:18px 22px;margin-bottom:25px;border:2px solid #e0e0e0;border-radius:16px;font-size:1.1rem;transition:all 0.3s;">
-                        <input type="email" placeholder="Your Email" required style="width:100%;padding:18px 22px;margin-bottom:25px;border:2px solid #e0e0e0;border-radius:16px;font-size:1.1rem;transition:all 0.3s;">
-                        <textarea rows="7" placeholder="Your Message" required style="width:100%;padding:18px 22px;margin-bottom:30px;border:2px solid #e0e0e0;border-radius:16px;font-size:1.1rem;resize:vertical;transition:all 0.3s;"></textarea>
-                        <button type="submit" style="width:100%;background:linear-gradient(135deg,#e67e22,#f39c12);color:white;border:none;padding:20px;border-radius:16px;font-size:1.4rem;font-weight:bold;cursor:pointer;box-shadow:0 15px 35px rgba(230,126,34,0.4);transition:all 0.3s;">
-                            Send Message
-                        </button>
-                    </form>
+            <div class="contact-info-side">
+                <div class="info-block">
+                    <h4>Email</h4>
+                    <p><a href="mailto:hello@runjuan.ph">hello@runjuan.ph</a></p>
+                </div>
+                <div class="info-block">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+639304335759">+63 930 433 5759</a></p>
+                </div>
+                <div class="info-block">
+                    <h4>Address</h4>
+                    <p>San Juan, Batangas<br>Philippines</p>
+                </div>
+
+                <div class="social-minimal">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Strava</a>
                 </div>
             </div>
         </div>
